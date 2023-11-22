@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explorar el Sur de Córdoba</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+  #map {
+  position: relative;
+  height: 400px;
+  }
+</style>
+
+<body>
+  <header class="header2">
+
+    <img src="/img/logo.png" alt="logo" class="logo">
+  
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="acerca de.html">Acerca de</a></li>
+            <li><a href="que visitar.html">Que Visitar</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+  </header>
+
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="mapa.js"></script>
+  <script>
+
+  var map = L.map('map').setView([-31.13521578003897, -64.14114309674214], 10);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  puntosDeInteres.forEach(function(punto) {
+    var marcador = L.marker(punto.latlng).addTo(map);
+    marcador.bindPopup('<b>' + punto.nombre + '</b><br>' + punto.contenido);
+  });
+</script>
+
+<footer class="footer">
+  <p class="footer_titulo">NATURALEZA SUR</p>
+  <div class="footer_social">
+      <a href="#" class="footer_icon_1"><i class="fa fa-facebook-f"></i></a>
+      <a href="#" class="footer_icon_2"><i class="fa fa-instagram"></i></a>
+      <a href="#" class="footer_icon_3"><i class="fa fa-whatsapp"></i></a>
+  </div>
+  <p class="footer_copy">© 2006-2023 | Todos los Derechos Reservados</p>
+</footer>
+
+</body>
+</html>

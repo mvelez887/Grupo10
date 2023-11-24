@@ -1,3 +1,35 @@
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  var map = L.map("map").setView([-31.2369, -64.4725], 10); // Coordenadas del centro del mapa
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
+  }).addTo(map);
+
+  // Añadir marcadores
+  var locations = [
+    { name: "Agua de Oro", coordinates: [-31.0012, -64.3317] },
+    { name: "Ascochinga", coordinates: [-31.1657, -64.2981] },
+    { name: "Colonia Caroya", coordinates: [-31.0815, -64.0038] },
+    { name: "Jesús María", coordinates: [-30.9775, -64.0944] },
+    { name: "La Calera", coordinates: [-31.3269, -64.3202] },
+    { name: "La Granja", coordinates: [-31.0323, -64.3209] },
+    { name: "Mendiolaza", coordinates: [-31.2568, -64.3138] },
+    { name: "Saldan", coordinates: [-31.3979, -64.2641] },
+    { name: "Salsipuedes", coordinates: [-31.1788, -64.2044] },
+    { name: "Unquillo", coordinates: [-31.2895, -64.3128] },
+    { name: "Villa Allende", coordinates: [-31.2915, -64.3005] }
+];
+  locations.forEach(function (location) {
+      L.marker(location.coordinates).addTo(map)
+          .bindPopup(location.name);
+  });
+});
+
+
+/*SLIDER*/
+
 let sliderImages = document.querySelectorAll(".slide"),
      arrowLeft = document.querySelector("#arrow-left"),
      arrowRight = document.querySelector("#arrow-right"),
@@ -48,23 +80,30 @@ let sliderImages = document.querySelectorAll(".slide"),
    
    startSlide();
    
+/*VALIDACION FORMULARIO*/
 
+function validateForm() {
+  // Obtener valores de los campos
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var message = document.getElementById('message').value;
 
-/*VALIDACION FORMULARI*/
+  // Expresión regular para validar el formato del correo electrónico
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-document.addEventListener('DOMContentLoaded', function () {
-  var form = document.querySelector('form');
+  // Validar que todos los campos estén llenos
+  if (name === "" || email === "" || message === "") {
+    alert("Todos los campos son obligatorios");
+    return false;
+  }
 
-  form.addEventListener('submit', function (event) {
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
+  // Validar el formato del correo electrónico
+  if (!emailRegex.test(email)) {
+    alert("Ingrese un correo electrónico válido");
+    return false;
+  }
 
-    if (name === '' || email === '' || message === '') {
-      alert('Por favor, completa todos los campos del formulario.');
-      event.preventDefault(); // Evita que el formulario se envíe si hay campos vacíos.
-    }
-  });
-});
-
+  // Si todo está bien, permitir el envío del formulario
+  return true;
+}
    

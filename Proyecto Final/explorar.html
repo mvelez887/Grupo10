@@ -7,10 +7,11 @@
     <meta name="keywords" content="Sierras Chicas, montañas, senderismo, reserva natural, museos, estancias">
     <title>Explorar</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
+   
+</head>
 <body>
 
     <header>
@@ -27,24 +28,7 @@
 
     <main class="container_explorar">
         <div id="map"></div>
-
-        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-        <script src="mapa.js"></script>
-        <script>
-      
-        var map = L.map('map').setView([-31.13521578003897, -64.14114309674214], 10);
-      
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: '© OpenStreetMap contributors'
-        }).addTo(map);
-      
-        puntosDeInteres.forEach(function(punto) {
-          var marcador = L.marker(punto.latlng).addTo(map);
-          marcador.bindPopup('<b>' + punto.nombre + '</b><br>' + punto.contenido);
-        });
-      </script>
     </main>
-
     <a href="#"class="ir_arriba">Scroll</a>
 
     <footer class="footer">
@@ -56,6 +40,9 @@
         </div>
         <p class="footer_copy">© 2006-2023 | Todos los Derechos Reservados</p>
     </footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="script.js"></script>
 
    
     

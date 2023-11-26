@@ -1,0 +1,1117 @@
+/*Estilos Globales*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:rgb(176, 217, 177);
+}
+ 
+h1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+ 
+p{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*Inicio*/
+
+.container_index {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3));
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Video*/
+
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/*Responsivo Video*/
+
+@media (min-aspect-ratio: 16/9) {
+    .back-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .back-video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+/*Menu*/
+
+nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo {
+    width: 80px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+/*Sierras Chicas*/
+
+.content {
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 160px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.content h1:hover {
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+
+/*Explorar*/
+
+.content a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 24px;
+    border: 2px solid #fff;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+/*Mapa*/
+
+.container_explorar{
+    background-color: rgb(121, 172, 120);
+    width: 960px;
+    margin: auto;
+    padding: 10px;
+}
+
+.leaflet-control-zoom span {
+    position: relative;
+    bottom: 0px;
+}
+
+#map {
+    position: relative;
+    height: 400px;
+}
+
+/*Menu 2*/
+
+.nav_2{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(32, 117, 97);
+    position: relative;
+}
+
+/*Destinos*/
+
+.container_destinos{
+    background-color: rgb(121, 172, 120);
+    width: 960px;
+    margin: auto;
+    padding: 10px;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 75px 50px;
+}
+
+.container .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    max-width: 100%;
+    height: 300px;
+    background: white;
+    border-radius: 20px;
+    transition: 0.5s;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+}
+
+.container .card:hover {
+    height: 400px;
+}
+
+.container .card .img-box {
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container .card:hover .img-box {
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.container .card .img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .card .content {
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    height: 35px;
+    padding: 0 30px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container .card:hover .content {
+    top: 130px;
+    height: 250px;
+}
+
+.container .card .content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color:#000000;
+}
+
+.container .card .content p {
+    color: #333;
+}
+
+.container .card .content a {
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    background: #009688;
+    color: white;
+    font-weight: 500;
+}
+
+.container .card .content a:hover {
+    opacity: 0.8;
+    background-color: #000000;
+    color: aqua;
+}
+
+/*Agua de oro*/
+
+.container_agua_de_oro{
+    background-color: rgb(121, 172, 120);
+    width: 960px;
+    margin: auto;
+    padding: 10px;
+}
+
+/*Ascochinga*/
+
+.container_ascochinga{
+    background-color: rgb(121, 172, 120);
+    width: 960px;
+    margin: auto;
+    padding: 10px;
+}
+
+/*Colonia Caroya*/
+
+.container_colonia_caroya{
+    background-color: rgb(121, 172, 120);
+    width: 960px;
+    margin: auto;
+    padding: 10px;
+}
+
+/*Jesus Maria*/
+
+.container_jesus_maria{
+    background-color: rgb(121, 172, 120);
+    width: 960px;
+    margin: auto;
+    padding: 10px;
+}
+
+/*La Calera*/
+
+.container_la_calera{
+    background-color: rgb(121, 172, 120);
+    width: 960px;
+    margin: auto;
+    padding: 10px;
+}
+
+/*La Granja*/
+
+.container_la_granja{
+    background-color: rgb(121, 172, 120);
+    width: 960px;
+    margin: auto;
+    padding: 10px;
+}
+
+/*Mendiolaza*/
+
+.container_mendiolaza{
+    background-color: rgb(121, 172, 120);
+    width: 960px;
+    margin: auto;
+    padding: 10px;
+}
+
+/*Saldan*/
+
+.container_saldan{
+    background-color: rgb(121, 172, 120);
+    width: 960px;
+    margin: auto;
+    padding: 10px;
+}
+
+/*Salsipuedes*/
+
+.container_salsipuedes{
+    background-color: rgb(121, 172, 120);
+    width: 960px;
+    margin: auto;
+    padding: 10px;
+}
+
+/*Unquillo*/
+
+.container_unquillo{
+    background-color: rgb(121, 172, 120);
+    width: 960px;
+    margin: auto;
+    padding: 10px;
+}
+
+/*Villa Allende*/
+
+.container_villa_allende{
+    background-color: rgb(121, 172, 120);
+    width: 960px;
+    margin: auto;
+    padding: 10px;
+}
+
+/*Responsivo Cartas*/
+
+@media (max-width: 480px) {
+    .container .card {
+        width: 230px;
+        border-radius: 15px;
+    }
+
+    .container .card .img-box {
+        width: 185px;
+        border-radius: 10px;
+    }
+
+    .container .card .content p {
+        font-size: 0.8rem;
+    }
+
+    .container .card .content a {
+        font-size: 0.9rem;
+    }
+}
+
+/*Enlace Volver*/
+
+.enlace_volver{
+    text-decoration: none;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 17px;
+}
+
+/*Galeria*/
+
+.container_galeria{
+    background-color: rgb(121, 172, 120);
+    width: 960px;
+    margin: auto;
+    padding: 10px;
+}
+
+.wrap,
+.slide-content{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;    
+    height: 90vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.wrap{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.slide{
+    background-size: contain;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+
+.slide1{
+    background-image: url("/img/capilla de candonga.jpg");
+}
+
+.slide2{
+    background-image: url("/img/iglesia san vicente ferrer.jpg");
+}
+
+
+.slide3{
+    background-image: url("/img/iglesia sagrado corazón de jesús.jpg");
+}
+
+.slide4{
+    background-image: url("/img/las 3 cascadas.jpg");
+}
+
+.slide5{
+    background-image: url("/img/avenida san martin.jpg");
+}
+
+.slide6{
+    background-image: url("/img/Estancia Jesuítica de Colonia Caroya.jpg");
+}
+
+.slide7{
+    background-image: url("/img/Estancia jesuitica jesus maria.jpg");
+}
+
+.slide8{
+    background-image: url("/img/torre cepedes.jpg");
+}
+
+.slide9{
+    background-image: url("/img/Museo Usina Molet.jpg");
+}
+
+.slide10{
+    background-image: url("/img/dique mal paso.jpg");
+}
+
+.slide11{
+    background-image: url("/img/iglesia lourdes la\ granja.jpg");
+}
+.slide12{
+    background-image: url("/img/reserva tiu mayu.jpg");
+}
+
+.slide13{
+    background-image: url("/img/club hipico.jpg");
+}
+
+.slide14{
+    background-image: url("/img/museo cielo abierto.jpg");
+}
+
+.slide15{
+    background-image: url("/img/arco de saldan.jpg");
+}
+
+.slide16{
+    background-image: url("/img/anfiteatro silvano manni.jpg");
+}
+
+.slide17{
+    background-image: url("/img/salto de estancita.jpg");
+}
+
+.slide18{
+    background-image: url("/img/iglesia nuestra señora del rosario del milagro.jpg");
+}
+
+.slide19{
+    background-image: url("/img/los quebrachitos.jpg");
+}
+
+.slide20{
+    background-image: url("/img/MuseoLino-Eneas Spilimbergo.jpg");
+}
+
+.slide21{
+    background-image: url("/img/cordoba golf club.jpg");
+}
+
+.slide22{
+    background-image: url("/img/scratch house.jpg");
+}
+
+.slide-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slide-content span{
+    font-size: 3rem;
+    color: #fff; 
+}
+
+.arrow{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+#arrow-left{
+    border-width: 30px 40px 30px 0;
+    border-color: transparent #fff transparent transparent;
+    left: 0;
+    margin-left: 30px;
+}
+
+#arrow-right{
+    border-width: 30px 0 30px 40px;
+    border-color: transparent transparent transparent #fff;
+    right: 0;
+    margin-right: 30px;
+}
+
+span{
+    position: absolute;
+    margin-bottom: -420px; 
+}
+
+/*Contacto*/
+
+.container_contacto{
+    background-color: rgb(121, 172, 120);
+    width: 960px;
+    margin: auto;
+    padding: 10px;
+}
+
+.contacto {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgb(184, 189, 184);
+  
+}
+  
+.contacto_titulo {
+    text-align: center;
+    margin-bottom: 30px;
+    
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+  
+input,
+textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+  
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+  
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+  
+
+/*Ir Arriba*/
+
+.ir_arriba{
+	width:40px;
+	height:40px;			
+	text-indent:-9999px;
+	opacity:0.3;
+	position:fixed;
+	bottom:20px;
+	right:40px;
+	display:none;			
+	background:url("/img/icon_top.png") no-repeat;
+    display: block
+}
+
+.ir_arriba:hover{
+	opacity:0.8;
+}
+
+/*Footer*/
+
+.footer{
+    background-color:rgb(119, 38, 3);
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    padding: 2rem 0;
+}
+
+.footer_title{
+    font-size: 2rem;
+    margin-bottom: 2rem; 
+}
+
+.footer_social{
+    margin-bottom: 2rem; 
+}
+
+.footer_icon{
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0 1rem;
+}
+
+.footer_icon:hover{
+    color: rgb(218, 67, 2);
+}
+
+.footer_copy{
+    font-size: .85rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/*Responsivo*/
+
+@media handheld, screen and (min-width: 600px)  and (max-width: 1023px) {
+
+/*Menu*/
+
+    nav .logo {
+        width: 70px;
+    }
+
+/*Sierras Chicas*/
+
+    .content h1 {
+        font-size: 75px;
+    }
+
+/*Explorar*/
+
+    .content a {
+        font-size: 20px;
+        padding: 10px 50px;
+    }
+
+/*Mapa*/
+    
+    .container_explorar{
+        width: 600px;
+    }
+
+/*Destinos*/
+    
+    .container_destinos{
+        width: 600px;
+    }
+        
+/*Localidades*/
+    
+    .container_agua_de_oro,
+    .container_ascochinga,
+    .container_colonia_caroya,
+    .container_jesus_maria,
+    .container_la_calera,
+    .container_la_granja,
+    .container_mendiolaza,
+    .container_saldan,
+    .container_salsipuedes,
+    .container_unquillo{
+        width: 600px;
+    }
+       
+/*Galeria*/
+    
+    .container_galeria{
+        width: 600px;
+    }
+    
+    .wrap,
+    .slide-content{
+        height: 70vh;
+    }
+    
+    .wrap{
+        margin-bottom: 15px;
+    }
+    
+    .slide-content span{
+        font-size: 2rem;
+    }
+    
+    #arrow-left{
+        margin-left: 15px;
+    }
+    
+    #arrow-right{
+        margin-right: 15px;
+    }
+    
+    span{
+        position: relative;
+        margin-top: -170px; 
+    }
+    
+/*Contacto*/
+    
+    .container_contacto{
+        width: 600px;
+    }
+    
+/*Ir arriba*/
+    
+    .ir_arriba{
+        right:20px;
+    }
+
+/*Footer*/
+    
+    .footer_copy{
+        font-size: 1.3rem;
+    }
+}
+
+@media handheld, screen and (min-width: 357px) and (max-width: 599px){
+
+/*Estilos Globales*/
+
+p{
+    font-size: 17px;
+}
+
+/*Menu*/
+
+nav {
+    flex-direction: column;
+}
+
+nav ul li {
+    margin-left: 10px;
+    padding-top: 10px;
+}
+
+/*Sierras Chicas*/
+
+.content h1 {
+    font-size: 40px;
+}
+
+/*Explorar*/
+
+.content a {
+    font-size: 20px;
+    padding: 5px 40px;
+}
+
+/*Mapa*/
+
+.container_explorar{
+    width: 357px;
+}
+
+.leaflet-control-zoom span {
+    position: relative;
+}
+
+#map {
+    height: 300px;
+}
+
+/*Menu 2*/
+
+.nav_2{
+    height: auto;
+}
+
+/*Destinos*/
+
+.container_destinos{
+    width: 357px;
+}
+
+.container {
+    gap: 50px 50px;
+    padding: 30px 50px;
+}
+
+/*Localidades*/
+
+.container_agua_de_oro,
+.container_ascochinga,
+.container_colonia_caroya,
+.container_jesus_maria,
+.container_la_calera,
+.container_la_granja,
+.container_mendiolaza,
+.container_saldan,
+.container_salsipuedes,
+.container_unquillo,
+.container_villa_allende{
+    width: 357px;
+}
+
+/*Galeria*/
+
+.container_galeria{
+    width: 357px;
+}
+
+.wrap,
+.slide-content{
+    height: 50vh;
+}
+
+.slide-content span{
+    font-size: 1rem;
+}
+
+.arrow{
+    top: 55%;
+    }
+
+#arrow-left{
+    border-width: 20px 30px 20px 0;
+    margin-left: 10px;
+}
+
+#arrow-right{
+    border-width: 20px 0 20px 30px;
+    margin-right: 10px;
+}
+
+span{
+    margin-bottom: -150px; 
+}
+
+/*Contacto*/
+
+.container_contacto{
+    width: 357px;
+}
+
+/*Ir Arriba*/
+
+.ir_arriba{
+	right:10px;
+}
+
+/*Footer*/
+
+.footer_title{
+    font-size: 1.5rem;
+}
+
+.footer_copy{
+    font-size: .75rem;
+}
+
+}
+
+@media handheld, screen and (min-width: 320px) and (max-width: 356px){
+
+/*Estilos Globales*/
+
+h1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+ 
+p{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*Inicio*/
+
+.container_index {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3));
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Video*/
+
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/*Responsivo Video*/
+
+@media (min-aspect-ratio: 16/9) {
+    .back-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .back-video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+/*Menu*/
+
+nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+nav .logo {
+    width: 70px;
+}
+
+nav ul li {
+    list-style: none;
+    display:inline-block;
+    margin: auto;
+    padding: 4px;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    
+}
+
+/*Sierras Chicas*/
+
+.content h1 {
+    margin-top: 50px;
+    font-size: 45px;
+}
+
+/*Explorar*/
+
+.content a {
+    font-size: 20px;
+    padding: 8px 30px;
+}
+
+/*Mapa*/
+
+.container_explorar{
+    width: 356px;
+}
+
+#map {
+    height: 300px;
+}
+
+/*Menu 2*/
+
+.nav_2{
+    height: auto;
+}
+
+/*Destinos*/
+
+.container_destinos{
+    width: 357px;
+}
+
+.container {
+    gap: 50px 50px;
+    padding: 30px 50px;
+}
+
+/*Localidades*/
+
+.container_agua_de_oro,
+.container_ascochinga,
+.container_colonia_caroya,
+.container_jesus_maria,
+.container_la_calera,
+.container_la_granja,
+.container_mendiolaza,
+.container_saldan,
+.container_salsipuedes,
+.container_unquillo,
+.container_villa_allende{
+    width: 356px;
+}
+
+/*Galeria*/
+
+.container_galeria{
+    width: 357px;
+}
+
+.wrap,
+.slide-content{
+    height: 40vh;
+}
+
+.wrap{
+    margin-bottom: 20px;
+}
+
+.slide-content span{
+    font-size: 1rem;
+}
+
+.arrow{
+    top: 55%;
+}
+
+#arrow-left{
+    border-width: 15px 15px 15px 0;
+    margin-left: 10px;
+}
+
+#arrow-right{
+    border-width: 15px 0 15px 15px;
+    margin-right: 10px;
+}
+
+span{
+    position: absolute;
+    margin-top: -270px; 
+}
+
+/*Contacto*/
+
+.container_contacto{
+    width: 356px;
+}
+
+/*Ir Arriba*/
+
+.ir_arriba{
+	width:40px;
+	height:40px;			
+	text-indent:-9999px;
+	opacity:0.3;
+	position:fixed;
+	bottom:20px;
+	right:10px;
+	display:none;			
+	background:url("/img/icon_top.png") no-repeat;
+    display: block
+}
+
+.ir_arriba:hover{
+	opacity:0.8;
+}
+
+/*Footer*/
+
+.footer_title{
+    font-size: 1.5rem;
+    margin-bottom: 2rem; 
+}
+
+.footer_copy{
+    font-size: .75rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
